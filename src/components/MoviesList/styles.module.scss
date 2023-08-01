@@ -1,0 +1,27 @@
+.movielist {
+    margin: 0 auto;
+    max-width: 50em;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 1rem;
+    text-align: center;
+
+
+    .link {
+        text-decoration: none;
+    }
+
+
+}
+
+.text {
+    font-family: "Yanone Kaffeesatz";
+    padding: 10px;
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: center;
+}

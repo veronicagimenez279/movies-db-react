@@ -1,0 +1,26 @@
+.footer {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 25vh;
+    text-align: center;
+    bottom: 0;
+
+    div {
+        font-weight: 300;
+        background: transparent;
+        color: #fff;
+        font-family: "Yanone Kaffeesatz";
+    }
+
+    span {
+        font-weight: 800;
+        color: #FFC000;
+        font-family: "Yanone Kaffeesatz";
+        background: transparent;
+    }
+
+    a {
+        background: transparent;
+        text-decoration: none;
+    }
+}

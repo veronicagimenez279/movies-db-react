@@ -1,0 +1,79 @@
+.container {
+    max-width: 50em;
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    border: 2px solid #1C212E;
+    border-radius: 10px;
+
+
+}
+
+.poster {
+    width: 15vw;
+    border: 1px solid #1C212E;
+    display: flex;
+    border-radius: 5px;
+}
+
+
+.containerText {
+    margin: 0 1rem;
+}
+
+.genre {
+    font-size: 14px;
+    font-family: 'Yanone Kaffeesatz';
+    margin-bottom: 5px;
+    padding: 0.3em;
+    background-color: #FFC000;
+    color: #121620;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.agerating {
+    font-size: 12px;
+    margin: 0.5em 0;
+    padding: 0.3rem;
+    background-color: #2a3144;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.plot {
+    font-style: italic;
+    text-align: justify;
+    font-size: 14px;
+}
+
+.emphasis {
+    color: #FFC000;
+    font-weight: 700;
+}
+
+.details {
+    font-size: 13px;
+    margin: 0.5em 0;
+}
+
+.ratingcontainer {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    gap: 0.5em;
+    margin-top: 0.5em;
+}
+
+.ratingimg {
+    width: 20px;
+}
+
+.ratingscontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+
+}
