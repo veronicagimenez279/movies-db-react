@@ -1,47 +1,63 @@
-//the full list of movies that appear on the homepage upon searching a term
-
 import { Link } from "react-router-dom";
-import { SearchMovie } from "../../interfaces/interfaces";
+import { Result, SearchMovie } from "../../interfaces/interfaces";
 import { MovieCard } from "../MovieCard";
+import { Loader } from "../Loader";
+
 import styles from "./styles.module.scss"
 
+
+
 interface Props {
-    movies: SearchMovie;
+    movies: SearchMovie | Result | null;
     error: Boolean
+    isLoading: Boolean;
 }
 
 
-export const MoviesList = ({ movies, error }: Props) => {
+export const MoviesList = ({ movies, error, isLoading }: Props) => {
+
+    if (isLoading) {
+        return <div className={styles.text}><Loader /></div>
+    }
+
+    if (error) {
+        return <p className={styles.text}>There was an error processing your request. Try again later.</p>
+    }
+
+    if (movies === null) {
+        return <div></div>;
+    }
+
+    if ('Error' in movies) {
+        return (
+            <div>
+                {(movies.Error == "Incorrect IMDb ID.")
+                    ?
+                    <p className={styles.text}>Search a movie or TV series</p>
+                    :
+                    <div>{(movies.Error) && <p className={styles.text}>{movies.Error}</p>}</div>
+                }
+            </div>
+        )
+    }
+
     return (
-        <div >
-            {error && <p className={styles.text}>There was an error processing your request. Try again later.</p>}
-            {/* @ts-ignore */}
-            {(movies.Error == "Incorrect IMDb ID.") ?
+        <div>
+            <div className={styles.movielist}>
+                {movies.Search.map((result) => (
 
-                <p className={styles.text}>Search a movie or TV series</p>
-                :
-                <div>
-                    {/* @ts-ignore */}
-                    {(movies.Error) ? <p className={styles.text}>{movies.Error}</p>
-                        :
-                        <div>
-                            <div className={styles.movielist}>
-
-                                {/* @ts-ignore */}
-                                {movies.map((result) => (
-
-                                    <div key={result.imdbID} >
-                                        <Link to={`/${result.imdbID}`} className={styles.link}>
-                                            <MovieCard movie={result} />
-                                        </Link>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                    <div key={result.imdbID} >
+                        <Link to={`/${result.imdbID}`} className={styles.link}>
+                            <MovieCard movie={result} />
+                        </Link>
+                    </div>
+                ))}
+            </div>
+        </div>
 
 
-                    }
-                </div>
-            }</div>
     )
 }
+
+
+

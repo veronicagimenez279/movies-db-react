@@ -6,6 +6,10 @@
     margin: 0 auto;
     font-size: 2rem;
 
+    span {
+        font-family: "Yanone Kaffeesatz";
+
+    }
 
     div {
         display: flex;
@@ -31,17 +35,22 @@
 
     }
 
-    span {
-        font-family: "Yanone Kaffeesatz";
-
-    }
-
     .title {
         padding: 0.2em;
-        font-family: 'Yanone Kaffeesatz';
         font-weight: 400;
         font-size: 1rem;
         line-height: 1rem;
 
     }
+
+    .db {
+        color: hsl(var(--accent));
+    }
+}
+
+.themebutton {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1em;
 }

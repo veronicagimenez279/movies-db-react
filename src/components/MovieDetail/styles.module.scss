@@ -5,7 +5,7 @@
     width: 100%;
     display: flex;
     justify-content: left;
-    border: 2px solid #1C212E;
+    border: 2px solid hsl(var(--muted));
     border-radius: 10px;
 
 
@@ -13,7 +13,7 @@
 
 .poster {
     width: 15vw;
-    border: 1px solid #1C212E;
+    border: 1px solid hsl(var(--muted));
     display: flex;
     border-radius: 5px;
 }
@@ -28,8 +28,8 @@
     font-family: 'Yanone Kaffeesatz';
     margin-bottom: 5px;
     padding: 0.3em;
-    background-color: #FFC000;
-    color: #121620;
+    background-color: hsl(var(--accent));
+    color: hsl(var(--bg));
     border-radius: 5px;
     width: fit-content;
 }
@@ -38,7 +38,7 @@
     font-size: 12px;
     margin: 0.5em 0;
     padding: 0.3rem;
-    background-color: #2a3144;
+    background-color: hsl(var(--muted));
     border-radius: 5px;
     width: fit-content;
 }
@@ -50,7 +50,7 @@
 }
 
 .emphasis {
-    color: #FFC000;
+    color: hsl(var(--accent));
     font-weight: 700;
 }
 

@@ -11,22 +11,21 @@
         padding: 0.8em;
         font-size: 16px;
         border-radius: 0.4em;
-        border: 1px solid #1C212E;
-        background-color: #1C212E;
+        border: 1px solid hsl(var(--muted));
+        background-color: hsl(var(--muted));
     }
 
     input {
         padding: 0.8em;
         border-radius: 0.4em;
         font-size: 16px;
-        border: 1px solid #1C212E;
-        background-color: #1C212E;
-        color: #EAEDEF;
+        border: 1px solid hsl(var(--muted));
+        background-color: hsl(var(--muted));
 
     }
 
     input[type="submit"] {
-        background-color: #FFC000;
+        background-color: hsl(var(--accent));
         color: #1C212E;
         font-weight: 700;
         cursor: pointer;
@@ -36,7 +35,7 @@
     }
 
     input[type="submit"]:hover {
-        background-color: #ffc929;
+        background-color: hsl(var(--accent1));
     }
 
     .searchinput {

@@ -2,15 +2,17 @@ import { useParams } from "react-router-dom"
 import { useMovie } from "../../hooks/useMovie";
 import { DetailCard } from "../../components/MovieDetail";
 import styles from "./styles.module.scss"
+import { Error404 } from "../../components/Error404";
+import { Loader } from "../../components/Loader";
 
 export const Detail = () => {
     const { imdbID } = useParams();
     const { isLoading, data } = useMovie(imdbID!)
-    console.log(data)
+
 
     if (!data && !isLoading) {
         return (
-            <div>The movie does not exist.</div>
+            <Error404 />
         )
     }
     return (
@@ -18,7 +20,7 @@ export const Detail = () => {
         <div className={styles.detail}>
             {isLoading
                 ?
-                <div>Loading...</div>
+                <Loader />
                 :
                 <DetailCard movie={data!} />
             }

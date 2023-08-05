@@ -2,11 +2,13 @@
     margin: 3em;
     font-size: 13px;
     font-weight: 600;
+    display: grid;
+    gap: .5em;
 
     span {
         font-family: 'Yanone Kaffeesatz';
         font-weight: 800;
-        color: #FFC000;
+        color: hsl(var(--accent));
         text-transform: uppercase;
         font-size: 14px;
 

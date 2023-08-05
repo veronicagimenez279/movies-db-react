@@ -1,13 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap");
 
+:root {
+  --_hue: 210;
+
+  /* Light Mode */
+  --bg--light: var(--_hue) 30% 94%;
+  --trnspbg--light: #d1d1d149;
+  --txt--light: var(--_hue) 30% 10%;
+  --accent--light: 195 100% 34%;
+  --accent1--light: 192 100% 34%;
+  --muted--light: var(--_hue) 30% 85%;
+  /* Dark Mode */
+  --bg--dark: var(--_hue) 30% 10%;
+  --trnspbg--dark: #1c212e28;
+  --txt--dark: var(--_hue) 30% 94%;
+  --accent--dark: 45.2 100% 50%;
+  --accent1--dark: 48.2 100% 50%;
+  --muted--dark: var(--_hue) 20% 15%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--bg--dark);
+    --trnspbg: var(--trnspbg--dark);
+    --txt: var(--txt--dark);
+    --accent: var(--accent--dark);
+    --accent1: var(--accent1--dark);
+    --muted: var(--muted--dark);
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: var(--bg--light);
+    --trnspbg: var(--trnspbg--light);
+    --txt: var(--txt--light);
+    --accent: var(--accent--light);
+    --accent1: var(--accent1--light);
+    --muted: var(--muted--light);
+    color-scheme: light;
+  }
+}
+
+[color-scheme="dark"] {
+  --bg: var(--bg--dark);
+  --trnspbg: var(--trnspbg--dark) color-scheme: dark;
+  --txt: var(--txt--dark);
+  --accent: var(--accent--dark);
+  --accent1: var(--accent1--dark);
+  --muted: var(--muted--dark);
+}
+
+[color-scheme="light"] {
+  --bg: var(--bg--light);
+  --trnspbg: var(--trnspbg--light);
+  --txt: var(--txt--light);
+  --accent: var(--accent--light);
+  --accent1: var(--accent1--light);
+  --muted: var(--muted--light);
+  color-scheme: light;
+}
+
 * {
   margin: 0;
   padding: 0;
   outline: none;
   box-sizing: border-box;
   font-family: "Lato";
-  color: #ffffff;
-  background-color: #121620;
+  color: hsl(var(--txt));
+  background-color: hsl(var(--bg));
 
 
 }

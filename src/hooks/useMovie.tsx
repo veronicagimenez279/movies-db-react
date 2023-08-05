@@ -13,7 +13,6 @@ export const useMovie = (params: String) => {
             .then(response => response.json())
             .then(responseJson => {
                 if (responseJson.Response === "True") {
-                    //console.log("res: ", responseJson);
                     setData(responseJson.Search || responseJson);
                     setError(false);
                 } else {

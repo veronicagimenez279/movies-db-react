@@ -1,5 +1,11 @@
-export const NotFound = () => {
+import styles from "./styles.module.scss"
+import { PiSmileySad } from 'react-icons/pi';
+
+export const Error404 = () => {
     return (
-        <div>Error 404</div>
+        <div className={styles.container}>
+            <PiSmileySad size={"10em"} />
+            <p>Sorry, the page you're looking for doesn't exist.</p>
+        </div>
     )
 }
