@@ -22,7 +22,7 @@ const MovieContextProvider = ({ children }: any) => {
     const searchMovies = async (name: string, year: string, type: string) => {
         setIsLoading(true);
         try {
-            const response = await fetch(`http://www.omdbapi.com/?apikey=92880c31&type=${type}&y=${year}&s=${name}`);
+            const response = await fetch(`https://www.omdbapi.com/?apikey=92880c31&type=${type}&y=${year}&s=${name}`);
             const data = await response.json();
             if (data) {
                 setMovies(data);

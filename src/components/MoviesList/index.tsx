@@ -46,7 +46,9 @@ export const MoviesList = ({ movies, error, isLoading }: Props) => {
             <div className={styles.movielist}>
                 {movies.Search.map((result) => (
 
-                    <div key={result.imdbID} >
+                    <div
+                        key={result.imdbID}
+                        aria-label={`Card for ${result.Title}`}>
                         <Link to={`/${result.imdbID}`} className={styles.link}>
                             <MovieCard movie={result} />
                         </Link>

@@ -33,7 +33,11 @@ const ColorSchemeButton = () => {
 
 
     return (
-        <button onClick={toggleColorScheme} className={styles.btn} >
+        <button
+            onClick={toggleColorScheme}
+            className={styles.btn}
+            aria-label='Dark/Light Mode Button'
+        >
             {isDarkMode
                 ?
                 <BsFillSunFill style={{ background: "transparent" }} />
