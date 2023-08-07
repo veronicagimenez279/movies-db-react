@@ -1,6 +1,10 @@
+import imdb from "../assets/imdb.png"
+import metacritic from "../assets/metacritic.png"
+import rtfresh from "../assets/rtfresh.png"
+
 export const ratingsite = {
-    "Internet Movie Database": "/src/assets/imdb.png",
-    "Rotten Tomatoes": "/src/assets/rtfresh.png",
-    "Metacritic": "/src/assets/metacritic.png",
+    "Internet Movie Database": imdb,
+    "Rotten Tomatoes": rtfresh,
+    "Metacritic": metacritic,
 };
 

@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const DetailCard = ({ movie }: Props) => {
-
+    console.log(ratingsite["Internet Movie Database"])
     return (
         <div className={styles.container}>
 
